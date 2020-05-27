@@ -1,0 +1,637 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.subtitulo{
+    color: #034873;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+/*HEADER*/
+
+.header{
+    height: 600px;
+    background-image: url(../imagenes/portadas/chris-hartung-gVWLpwBpLIg-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+
+.hamburguer{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    z-index: 2000;
+}
+
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    width: 30vw;
+    height: 100%;
+    background-color: #0678BF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0;
+    transform: translateX(110%);
+    transition:transform 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.spread{
+    transform: translateX(0);
+    z-index: 1800;
+}
+
+.menu-navegacion a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+h1{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+/* sobre-mi */
+
+.sobre-mi{
+    display: flex;
+    flex-flow: wrap;
+    justify-content:space-between;
+    align-items: flex-start;
+    
+}
+.contenedor-img-sobre-mi{
+    width: 40%;
+    align-items: flex-start;
+    text-align: center;
+}
+.contenedor-img-sobre-mi img{
+    border: solid 5px #034873;
+    height: 450PX;
+}
+.contenedor-texto-sobre-mi{
+    width: 60%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.texto-sobre-mi{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.texto-sobre-mi h2{
+    font-size: 30px;
+    margin: 5px;
+    color: #034873;
+    text-align: center;
+}
+
+.texto-sobre-mi p{
+    margin-top: 10px;
+    font-size: 17px;
+    width: 85%;
+    text-align: center;
+
+}
+.nuestros-valores{
+    width: 90%;
+    display: flex;
+    flex-flow: column ;
+    align-items: center;
+    justify-content: start;
+    margin: 25px;
+
+}
+.nuestros-valores img{
+    margin: 5px;
+    width: 55px;
+    height: 55px;
+}
+.nuestros-valores h3{
+    font-size: 22px;
+    color:#034873 ;
+    text-align: center;
+    font-weight: 300;
+   
+
+}
+.contenedor-boton-sobre-mi{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    transition: .5s;
+    
+}
+.contenedor-boton-sobre-mi:hover{
+    transform: scale(1.10);
+}
+.boton-sobre-mi{
+   text-decoration: none;
+   font-size: 20px;
+   color: #034873;
+   border: solid #034873 2px;
+   padding: 10px 10px 10px 10px;
+}
+
+.boton-sobre-mi:hover{
+    background-color:#034873;
+    color: #F2F2F2;
+    
+}
+
+/*separaacion*/
+
+.separacion{
+    background-image: url(../imagenes/portadas/jon-flobrant-hKbNSRzUMhg-unsplash.jpg);
+    background-position: center;
+    height: 600px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative; 
+}
+.textos-separacion{
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: wrap;
+}
+.textos-separacion h1{
+    color:#fff;
+    font-size: 45px;
+    text-align: center;
+    padding: 90px 90px 40px 90px;
+}
+.wave-2{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+/*galaeria*/
+
+.portafolio{
+    background-color:#fff;
+}
+
+.galeria-conetedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.imagen-port{
+    width: 28%;
+    display: block;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+    cursor: pointer;
+    transition: .5s;
+    margin-bottom:25px ;
+    
+}
+
+.imagen-port:hover{
+    transform: scale(1.05);
+}
+
+a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+
+}
+.hover-galeria{
+ position:absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ transform: scale(0);
+ background-color:rgba(0, 76, 139, 0.70);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 120px;
+    height: 120px;
+}
+
+.hover-galeria h3{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+.hover-galeria h3{
+    padding: 10px;
+    color:#fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.contenedor-boton-portafolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    transition: .5s;
+}
+.boton-portafolio{
+    text-decoration:none;
+    font-size: 20px;
+    color: #034873;
+    border: solid #034873 2px;
+   padding: 10px 10px 10px 10px;
+}
+.contenedor-boton-portafolio:hover{
+    transform: scale(1.10);
+}
+.boton-portafolio:hover{
+    background-color: #034873;
+    color:#f2f2f2 ;
+}
+/*separacion*/
+
+.separacion-2{
+    background-image: url(../imagenes/portadas/jakob-owens-HgY3BnCWiq8-unsplash.jpg);
+    background-position: center;
+    height: 600px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.wave-3{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+/*servicios*/
+
+.imagen-light{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.534);
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.agregar-imagen{
+    width: 60%;
+    transform: scale(0);
+    border-radius: 10px;
+    transition: transform .3s .2s;
+}
+
+.showImage{
+    transform: scale(1);
+}
+
+.show{
+    transform: translate(0);
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+.experts{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+.cont-expert {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cont-expert a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #F2F2F2;
+    transition: .5s;
+    padding: 15px;
+
+}
+.cont-expert a:hover{
+    transform: scale(1.05);
+}
+
+.cont-expert img{
+    display: block;
+    margin: auto;
+    width: 40%;
+    
+}
+
+.n-expert{
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 400;
+    color: #034873;
+}
+
+.contenedor-boton-servicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    transition: .5s;
+}
+.boton-servicio{
+    text-decoration:none;
+    font-size: 20px;
+    color: #034873;
+    border: solid #034873 2px;
+   padding: 10px 10px 10px 10px;
+}
+.contenedor-boton-servicio:hover{
+    transform: scale(1.10);
+}
+.boton-servicio:hover{
+    background-color: #034873;
+    color:#f2f2f2 ;
+}
+
+/*footer*/
+
+footer{
+    /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c0ee 100%); */
+    /* background: #a6c0ee; */
+    /* background-image: linear-gradient(to top, hsl(258, 43%, 68%) 0%, hsl(318, 88%, 87%) 100%); */
+    background:#0678BF;
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+
+.contact-us{
+    width: 40%;
+    color: #fff;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p{
+    font-weight: 500;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+.social-media-icon:hover{
+    background: #fff;
+    color:#0678BF;
+}
+
+
+
+
+
+@media screen and (max-width: 800px){
+    
+    .menu-navegacion{
+        width: 50vw;
+    }
+    header{
+        background-position: center;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+    /*SOBRE-MI*/
+
+    .contenedor-img-sobre-mi{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .contenedor-texto-sobre-mi{
+        width: 100%;
+        text-align: center;
+    }
+
+    .sobre-mi{
+        margin-bottom: 30px;
+    }
+    /*galeria*/
+    
+    .imagen-port {
+        width: 80%;
+    }
+    .imagen-port:hover{
+        transform: scale(1);
+    }
+    .imagen-port:hover .hover-galeria{
+        transform: scale(0);
+    }
+    
+   
+    .agregarImagen{
+        width: 80%;
+    }
+    /*servicios*/
+
+    .cont-expert{
+        width: 80%;
+    }
+    .cont-expert a:hover{
+        transform: scale(1);
+    }
+    
+    /*separacion*/
+    .textos-separacion h1{
+       
+        font-size: 35px;
+        
+        padding: 0px 40px 40px 40px;
+    }
+
+    
+    .footer-content{
+        justify-content: center;
+    }
+
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    
+}
+
+
+@media screen and (max-width: 500px){
+    .contenedor-texto-sobre-mi{
+        width: 100%;
+        text-align: center;
+    }
+
+    
+   
+    .menu-navegacion{
+        width: 65vw;
+    }
+
+    .hamburguer{
+        top: 20px;
+        right: 20px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .subtitulo{
+        font-size: 30px;
+    }
+    
+    .imagen-port{
+        width: 95%;
+    }
+    
+    .agregar-imagen{
+        width: 90%;
+    }
+
+    .social-media{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width: 95%;
+        margin-bottom: 40px;
+    } 
+
+
+}
